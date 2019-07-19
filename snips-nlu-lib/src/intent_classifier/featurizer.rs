@@ -111,7 +111,7 @@ impl Featurizer {
             entities_features,
             word_cluster_features,
         ].into_iter()
-            .flatten()
+            .flat_map(|entities| entities)
             .collect()
     }
 }
